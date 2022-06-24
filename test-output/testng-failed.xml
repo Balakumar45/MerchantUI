@@ -6,7 +6,7 @@
       <class name="MerchantUI.LoginPage">
         <methods>
           <include name="CloseBrowser"/>
-          <include name="CheckingForBrokenLink"/>
+          <include name="InvalidLoginAttempts"/>
           <include name="beforeTestExec"/>
         </methods>
       </class> <!-- MerchantUI.LoginPage -->

@@ -128,8 +128,7 @@ public class LoginPage extends base {
 		
 	}
 	
-	@Test(dataProvider="InvalidLoginData",priority=4)
-	
+	@Test(dataProvider="InvalidLoginData",priority=4)	
 	public void InvalidLoginAttempts(String Username,String Password, String Text) throws IOException 
 	{
 			
@@ -160,9 +159,9 @@ public class LoginPage extends base {
 	@DataProvider(name="InvalidLoginData")
 	public String[][] getInvalidTestData() throws IOException
 	{
-		String path=System.getProperty("user.dir")+"/src/main/java/resources/TestData.xlsx";
-		int rowcount=XLUtils.getRowCount(path,"InvalidLoginData");
-		int colcount=XLUtils.getCellCount(path,"InvalidLoginData",1);
+		String path=System.getProperty("user.dir")+"\\src\\main\\java\\resources\\TestData.xlsx";
+		int rowcount=XLUtils.getRowCount(path,"Sheet1");
+		int colcount=XLUtils.getCellCount(path,"Sheet1",1);
 		
 		String LoginInvalidData[][]=new String[rowcount][colcount];
 		
@@ -170,7 +169,7 @@ public class LoginPage extends base {
 		{
 			for(int j=0;j<colcount;j++)
 			{
-				LoginInvalidData[i-1][j]=XLUtils.getCellData(path,"InvalidLoginData", i, j);
+				LoginInvalidData[i-1][j]=XLUtils.getCellData(path,"Sheet1", i, j);
 			}
 		}
 		return LoginInvalidData;
