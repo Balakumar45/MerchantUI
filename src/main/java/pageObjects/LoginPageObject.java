@@ -44,17 +44,17 @@ public class LoginPageObject {
 	{
 		return driver.findElement(PCImg);
 	}
-	public WebElement getFrgotPass()
+	public void ClickOnForgotPassword()
 	{
-		return driver.findElement(FrgotPass);
+		driver.findElement(FrgotPass).click();
 	}
 	public WebElement getSignUpLftTxt()
 	{
 		return driver.findElement(SignUpLftTxt);
 	}
-	public WebElement getSignUpbtn()
+	public void ClickSignUpButton()
 	{
-		return driver.findElement(SignUpbtn);
+		driver.findElement(SignUpbtn).click();
 	}
 	public WebElement getLoginFormTitle()
 	{

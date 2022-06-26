@@ -17,6 +17,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 
 public class base {
 	public static WebDriver driver;
@@ -80,14 +81,31 @@ public class base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		return driver;
 		}
+		
 	
 	public String getScreenShotPath(String testCaseName,WebDriver driver) throws IOException{
-	Calendar calendar = Calendar.getInstance();
-	SimpleDateFormat formater = new SimpleDateFormat("dd_MM_yyy_hh_mm_ss");
-	TakesScreenshot ts=(TakesScreenshot) driver;
-	File source =ts.getScreenshotAs(OutputType.FILE);
-	String destinationFile = System.getProperty("user.dir")+"\\reports\\"+testCaseName+formater.format(calendar.getTime())+".png";
-	FileUtils.copyFile(source,new File(destinationFile));
-	return destinationFile;
+	
+		Calendar calendar = Calendar.getInstance();
+		SimpleDateFormat formater = new SimpleDateFormat("dd_MM_yyy_hh_mm_ss");
+		TakesScreenshot ts=(TakesScreenshot) driver;
+		File source =ts.getScreenshotAs(OutputType.FILE);
+		String destinationFile = System.getProperty("user.dir")+"\\reports\\"+testCaseName+formater.format(calendar.getTime())+".png";
+		FileUtils.copyFile(source,new File(destinationFile));
+		return destinationFile;
+		}
+	
+	public void TextCompare(String ExpectedText, String ActualText, String Test){
+		
+		log.debug("Validating "+Test);
+		if(ActualText.contentEquals(ExpectedText))
+		{
+			log.debug(Test+" is as per Expected.");
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			log.error(Test+" Validation Failed.");
+			Assert.assertTrue(false);
+		}
 	}
 }

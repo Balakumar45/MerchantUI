@@ -30,7 +30,12 @@ public class LoginPage extends base {
 		driver.get(URL);
 		log.info("Navigated to Desired URL");
 	}
-	
+	@AfterTest
+	public void CloseBrowser()
+	{
+		driver.close();	
+	}
+		
 	@Test(priority=1)
 	public void loginFormTitleValidation()
 	{
@@ -55,7 +60,7 @@ public class LoginPage extends base {
 		else
 		{
 			Assert.assertTrue(false);
-			log.error("Partner logo is not Uploaded..");
+			log.error("Partner logo is not Uploaded in login page..");
 		}
 	}
 	
@@ -118,7 +123,8 @@ public class LoginPage extends base {
 		}
 		else 
 		{
-				Assert.assertTrue(false);
+			Assert.assertTrue(false);
+			log.error("Valid Login Attempt Failed");
 		}
 		dpg= new DashboardPageObject(driver);
 		dpg.clickLogoutdropdown();
@@ -148,7 +154,7 @@ public class LoginPage extends base {
 		
 		if(ActualErrorMessage.equalsIgnoreCase(ExpectedErrorMessage))
 		{
-			log.info(Text+" TestCase Passed");
+			log.debug(Text+" TestCase Passed");
 		}
 		else
 		{
@@ -160,8 +166,8 @@ public class LoginPage extends base {
 	public String[][] getInvalidTestData() throws IOException
 	{
 		String path=System.getProperty("user.dir")+"\\src\\main\\java\\resources\\TestData.xlsx";
-		int rowcount=XLUtils.getRowCount(path,"Sheet1");
-		int colcount=XLUtils.getCellCount(path,"Sheet1",1);
+		int rowcount=XLUtils.getRowCount(path,"InvalidLogin");
+		int colcount=XLUtils.getCellCount(path,"InvalidLogin",1);
 		
 		String LoginInvalidData[][]=new String[rowcount][colcount];
 		
@@ -169,18 +175,9 @@ public class LoginPage extends base {
 		{
 			for(int j=0;j<colcount;j++)
 			{
-				LoginInvalidData[i-1][j]=XLUtils.getCellData(path,"Sheet1", i, j);
+				LoginInvalidData[i-1][j]=XLUtils.getCellData(path,"InvalidLogin", i, j);
 			}
 		}
 		return LoginInvalidData;
 	}		
-	
-	@AfterTest
-	public void CloseBrowser()
-	{
-		driver.close();	
-	}
-	
-	
-
 }

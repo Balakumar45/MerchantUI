@@ -1,5 +1,7 @@
 package pageObjects;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,7 +9,7 @@ import org.openqa.selenium.WebElement;
 public class SignUpPageObject {
 	public WebDriver driver;
 	
-	private By FormHeading=By.xpath("//p[@align=\"center\"]");
+	private By FormHeading=By.cssSelector("p[align='center']");
 	private By SignUpUname=By.cssSelector("input[placeholder='Username or Email*']");
 	private By SignUpPass=By.id("passwd");
 	private By CnfrmPass=By.id("conpasswd");
@@ -21,18 +23,21 @@ public class SignUpPageObject {
 	private By CntTelNum=By.cssSelector("input[placeholder='Contact Telephone Number*']");
 	private By ChckBoxBtn=By.id("check");
 	private By SbmtBoxBtn=By.id("btnSubmit");
-	private By PrvcyPolcylink=By.linkText("Privacy Policy");
-	private By Termlink=By.linkText("Terms of use.");
 	private By Loginlink=By.linkText("Log In");
 	private By AlreadyUserTxt=By.cssSelector(".loginLabel']");
 	private By ChckBoxMsg=By.cssSelector("div[class='form-group'] b");
+	private By AlertNoButton=By.id("noSubmit");
+	private By Message=By.xpath("//*[@id=\"log_alignsign\"]/table/tbody/tr[2]/td/font");
+	private By PartnerLogo=By.xpath("/html/body/div[1]/div/div/div/div/a/img");
+	private By AlreadyUser=By.cssSelector(".loginLabel");
+	private By Links=By.tagName("a");
 	
 	public SignUpPageObject(WebDriver driver) {
 		this.driver=driver;
 	}
-	public WebElement getFormHeading()
+	public String getFormHeading()
 	{
-		return driver.findElement(FormHeading);
+		return driver.findElement(FormHeading).getText();
 	}
 	public WebElement getSignUpUname()
 	{
@@ -78,21 +83,13 @@ public class SignUpPageObject {
 	{
 		return driver.findElement(CntTelNum);
 	}
-	public WebElement getChckBoxBtn()
+	public void ClickCheckBox()
 	{
-		return driver.findElement(ChckBoxBtn);
+		driver.findElement(ChckBoxBtn).click();
 	}
-	public WebElement getSbmtBoxBtn()
+	public void CLickSubmitbutton()
 	{
-		return driver.findElement(SbmtBoxBtn);
-	}
-	public WebElement getPrvcyPolcylink()
-	{
-		return driver.findElement(PrvcyPolcylink);
-	}
-	public WebElement getTermlink()
-	{
-		return driver.findElement(Termlink);
+		driver.findElement(SbmtBoxBtn).click();
 	}
 	public WebElement getLoginlink()
 	{
@@ -102,9 +99,30 @@ public class SignUpPageObject {
 	{
 		return driver.findElement(AlreadyUserTxt);
 	}
-	public WebElement getChckBoxMsg()
+	public String getChckBoxMsg()
 	{
-		return driver.findElement(ChckBoxMsg);
+		return driver.findElement(ChckBoxMsg).getText();
 	}
+	public void ClickAlertNoButton()
+	{
+		driver.findElement(AlertNoButton).click();
+	}
+	public String getSubimtErrorMessage()
+	{
+		return driver.findElement(Message).getText();
+	}
+	public WebElement getPartnerLogo()
+	{
+		return driver.findElement(PartnerLogo);
+	}
+	public String getAlreadyUserText()
+	{
+		return driver.findElement(AlreadyUser).getText();
+	}
+	public List<WebElement> getAllLinks()
+	{
+		return driver.findElements(Links);
+	}
+	
 	
 }
