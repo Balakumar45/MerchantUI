@@ -6,6 +6,7 @@ import java.io.IOException;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -20,6 +21,7 @@ public class XLUtils
 	public static Row row;
 	public static Cell cell;
 	public static CellStyle style;
+	public static DataFormatter format;
 	
 	public static int getRowCount(String xlfile,String xlsheet) throws IOException
 	{
@@ -53,10 +55,13 @@ public class XLUtils
 		row=ws.getRow(rownum);
 		cell=row.getCell(colnum);
 		String data;
+		format = new DataFormatter();
+		
 		try 
 		{
-			data=cell.getStringCellValue();
-		} catch (Exception e) 
+			data=format.formatCellValue(cell);
+		} 
+		catch (Exception e) 
 		{
 			data="";
 		}

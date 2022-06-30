@@ -122,7 +122,7 @@ public class SignupPage extends base {
 			String TelephoneNo,
 			String TestName,
 			String ExpectedResult		
-			)
+			) throws InterruptedException
 	{
 		lpg= new LoginPageObject(driver);
 		lpg.ClickSignUpButton();
@@ -134,7 +134,8 @@ public class SignupPage extends base {
 		spg.getSiteUrl().sendKeys(SiteURL);
 		Select dropdown=new Select(spg.getCountryDrpdown());
 		dropdown.selectByVisibleText(Country);
-		spg.getSupportNum().sendKeys(SupportNumber);
+		//spg.getSupportNum().click();
+		spg.getSupportNum().sendKeys("9866781567");
 		spg.getCntEmailAdd().sendKeys(EmailAddress);
 		spg.getCntPrsnName().sendKeys(ContactPerson);
 		spg.getCntTelNum().sendKeys(TelephoneNo);
