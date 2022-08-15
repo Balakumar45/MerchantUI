@@ -64,12 +64,12 @@ public class base {
 		}
 		if(EnvSelected.equals("Staging"))
 		{
-			URL="https://staging.paymentz.com//merchant/index.jsp";
+			URL="https://staging.paymentz.com/merchant/index.jsp?partnerid=1&fromtype=paymentz";
 			log.debug("Test running on Staging Environment");
 		}
 		else if(EnvSelected.equals("Preprod"))
 		{
-			URL="https://preprod.paymentz.com//merchant/index.jsp";
+			URL="https://preprod.paymentz.com/merchant/index.jsp?partnerid=1&fromtype=paymentz";
 			log.debug("Test running on Preprod Environment");
 		}
 		else if(EnvSelected.equals("DSG"))

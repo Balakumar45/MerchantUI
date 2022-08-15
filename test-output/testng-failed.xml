@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="MerchantUI.LoginPage">
+      <class name="MerchantUI.ForgotpasswordPage">
         <methods>
-          <include name="CloseBrowser"/>
-          <include name="CheckingForBrokenLink"/>
+          <include name="LoginButtonFunctionalityCheck"/>
           <include name="beforeTestExec"/>
+          <include name="CloseBrowser"/>
         </methods>
-      </class> <!-- MerchantUI.LoginPage -->
+      </class> <!-- MerchantUI.ForgotpasswordPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
