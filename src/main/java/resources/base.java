@@ -33,7 +33,6 @@ public class base {
 		//String EnvSelected=System.getProperty("Environment");
 		String browserName=prop.getProperty("browser");
 		String EnvSelected=prop.getProperty("Environment");
-		
 		if(browserName.equals("Chrome"))
 		{
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Driver\\chromedriver.exe");

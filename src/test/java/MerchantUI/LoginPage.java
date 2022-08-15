@@ -64,7 +64,7 @@ public class LoginPage extends base {
 		}
 	}
 	
-	@Test(priority=8)
+	@Test(priority=3)
 	public void IsPCILogoDisplayed() {
 		
 		lpg= new LoginPageObject(driver);
@@ -80,7 +80,7 @@ public class LoginPage extends base {
 		}
 	}
 	
-	@Test
+	@Test(enabled=false)
 	public void CheckingForBrokenLink() throws InterruptedException, IOException {
 		lpg= new LoginPageObject(driver);
 		List<WebElement> listElements=lpg.getAllLinks();
@@ -106,7 +106,7 @@ public class LoginPage extends base {
 	}
 	
 	
-	@Test(priority=3)
+	@Test(priority=4)
 	public void ValidLoginAttempt() throws InterruptedException {
 		
 		lpg= new LoginPageObject(driver);

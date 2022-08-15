@@ -30,7 +30,7 @@ public class ForgotpasswordPage extends base {
 		driver.close();	
 	}
 	
-	@Test(priority=1)
+	@Test(priority=0)
 	public void ForgotPasswordTitleValidation()
 	{
 		lpg= new LoginPageObject(driver);
@@ -39,6 +39,20 @@ public class ForgotpasswordPage extends base {
 		String ActualText=fpg.getFormHeading();
 		String ExpectedText="Forgot Password";
 		String TestName="Forgot Password Form Title";
+		TextCompare(ExpectedText,ActualText,TestName);
+	}
+	
+	@Test(priority=1)
+	public void ForgotPasswordCheck()
+	{
+		lpg= new LoginPageObject(driver);
+		lpg.ClickOnForgotPassword();
+		fpg= new ForgotPasswordPageObject(driver);
+		fpg.getUsernameField().sendKeys("VinayakM1");
+		fpg.getSubmitButton().click();
+		String ActualText=fpg.getResponseText();;
+		String ExpectedText="Your temporary password has been sent to you by email to your mailing address set on our server. Please use the login and password to logon to the paymentz System within one hour.";
+		String TestName="Forgot Password Functionality";
 		TextCompare(ExpectedText,ActualText,TestName);
 	}
 		

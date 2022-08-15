@@ -19,7 +19,7 @@ public class SignUpPageObject {
 	private By Phonecc=By.id("phonecc");
 	private By SupportNum=By.cssSelector("input[placeholder='Support Number*']");
 	private By CntEmailAdd=By.cssSelector("input[placeholder='Contact Email Address*']");
-	private By CntPrsnName=By.cssSelector("input[placeholder='Contact Person's Name*']");
+	private By CntPrsnName=By.cssSelector("input[placeholder=\"Contact Person's Name*\"]");
 	private By CntTelNum=By.cssSelector("input[placeholder='Contact Telephone Number*']");
 	private By ChckBoxBtn=By.id("check");
 	private By SbmtBoxBtn=By.id("btnSubmit");
@@ -27,7 +27,7 @@ public class SignUpPageObject {
 	private By AlreadyUserTxt=By.cssSelector(".loginLabel']");
 	private By ChckBoxMsg=By.cssSelector("div[class='form-group'] b");
 	private By AlertNoButton=By.id("noSubmit");
-	private By Message=By.xpath("//*[@id=\"log_alignsign\"]/table/tbody/tr[2]/td/font");
+	private By Message=By.xpath("//*[@id='log_alignsign']/table/tbody/tr[2]/td/font");
 	private By PartnerLogo=By.xpath("/html/body/div[1]/div/div/div/div/a/img");
 	private By AlreadyUser=By.cssSelector(".loginLabel");
 	private By Links=By.tagName("a");
@@ -83,13 +83,13 @@ public class SignUpPageObject {
 	{
 		return driver.findElement(CntTelNum);
 	}
-	public void ClickCheckBox()
+	public WebElement getCheckBox()
 	{
-		driver.findElement(ChckBoxBtn).click();
+		return driver.findElement(ChckBoxBtn);
 	}
-	public void CLickSubmitbutton()
+	public WebElement GetSubmitbutton()
 	{
-		driver.findElement(SbmtBoxBtn).click();
+		return driver.findElement(SbmtBoxBtn);
 	}
 	public WebElement getLoginlink()
 	{
@@ -103,13 +103,13 @@ public class SignUpPageObject {
 	{
 		return driver.findElement(ChckBoxMsg).getText();
 	}
-	public void ClickAlertNoButton()
+	public WebElement GetAlertNoButton()
 	{
-		driver.findElement(AlertNoButton).click();
+		return driver.findElement(AlertNoButton);
 	}
-	public String getSubimtErrorMessage()
+	public WebElement getSubimtErrorMessage()
 	{
-		return driver.findElement(Message).getText();
+		return driver.findElement(Message);
 	}
 	public WebElement getPartnerLogo()
 	{

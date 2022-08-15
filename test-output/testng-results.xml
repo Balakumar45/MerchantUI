@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="5" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-28T22:14:11 IST" name="Default suite" finished-at="2022-06-28T22:14:22 IST" duration-ms="10340">
+  <suite started-at="2022-08-08T22:52:41 IST" name="Default suite" finished-at="2022-08-08T22:52:55 IST" duration-ms="13879">
     <groups>
     </groups>
-    <test started-at="2022-06-28T22:14:11 IST" name="Default test" finished-at="2022-06-28T22:14:22 IST" duration-ms="10340">
-      <class name="MerchantUI.SignupPage">
-        <test-method is-config="true" signature="beforeTestExec()[pri:0, instance:MerchantUI.SignupPage@28276e50]" started-at="2022-06-28T22:14:11 IST" name="beforeTestExec" finished-at="2022-06-28T22:14:20 IST" duration-ms="8906" status="PASS">
+    <test started-at="2022-08-08T22:52:41 IST" name="Default test" finished-at="2022-08-08T22:52:55 IST" duration-ms="13879">
+      <class name="MerchantUI.ForgotpasswordPage">
+        <test-method is-config="true" signature="beforeTestExec()[pri:0, instance:MerchantUI.ForgotpasswordPage@f6c03cb]" started-at="2022-08-08T22:52:41 IST" name="beforeTestExec" finished-at="2022-08-08T22:52:54 IST" duration-ms="12141" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestExec -->
-        <test-method signature="IsPartnerLogoDisplayed()[pri:3, instance:MerchantUI.SignupPage@28276e50]" started-at="2022-06-28T22:14:20 IST" name="IsPartnerLogoDisplayed" finished-at="2022-06-28T22:14:22 IST" duration-ms="1111" status="PASS">
+        <test-method signature="ForgotPasswordCheck()[pri:1, instance:MerchantUI.ForgotpasswordPage@f6c03cb]" started-at="2022-08-08T22:52:54 IST" name="ForgotPasswordCheck" finished-at="2022-08-08T22:52:55 IST" duration-ms="1445" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- IsPartnerLogoDisplayed -->
-        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:MerchantUI.SignupPage@28276e50]" started-at="2022-06-28T22:14:22 IST" name="CloseBrowser" finished-at="2022-06-28T22:14:22 IST" duration-ms="263" status="PASS">
+        </test-method> <!-- ForgotPasswordCheck -->
+        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:MerchantUI.ForgotpasswordPage@f6c03cb]" started-at="2022-08-08T22:52:55 IST" name="CloseBrowser" finished-at="2022-08-08T22:52:55 IST" duration-ms="238" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseBrowser -->
-      </class> <!-- MerchantUI.SignupPage -->
+      </class> <!-- MerchantUI.ForgotpasswordPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

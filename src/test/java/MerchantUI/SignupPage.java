@@ -3,11 +3,15 @@ package MerchantUI;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.time.Duration;
 import java.util.List;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -22,8 +26,8 @@ import resources.base;
 public class SignupPage extends base {
 	public WebDriver driver;
 	public SignUpPageObject spg;
-	public LoginPageObject lpg;	
-	
+	public LoginPageObject lpg;
+		
 	@BeforeTest
 	public void beforeTestExec() throws IOException
 	{
@@ -108,7 +112,7 @@ public class SignupPage extends base {
 		}
 	}
 	
-	@Test(dataProvider="InvalidSignUpData",priority=6)
+	@Test(dataProvider="InvalidSignUpData",priority=5)
 	public void SignUpWithInvalidCredentials(
 			String Username,
 			String Password,
@@ -127,23 +131,68 @@ public class SignupPage extends base {
 		lpg= new LoginPageObject(driver);
 		lpg.ClickSignUpButton();
 		spg= new SignUpPageObject(driver);
+		
+		spg.getSignUpUname().clear();
 		spg.getSignUpUname().sendKeys(Username);
+		log.debug("Username sent as - "+Username);
+		
+		spg.getSignUpPass().clear();
 		spg.getSignUpPass().sendKeys(Password);
+		log.debug("Password sent as - "+Password);
+		
+		spg.getCnfrmPass().clear();
 		spg.getCnfrmPass().sendKeys(ConfirmPassword);
+		log.debug("Confirm Password sent as - "+ConfirmPassword);
+		
+		spg.getOrgName().clear();
 		spg.getOrgName().sendKeys(OrganizationName);
+		log.debug("Organization name sent as - "+OrganizationName);
+		
+		spg.getSiteUrl().clear();
 		spg.getSiteUrl().sendKeys(SiteURL);
+		log.debug("Site URL sent as - "+SiteURL);
+		
 		Select dropdown=new Select(spg.getCountryDrpdown());
 		dropdown.selectByVisibleText(Country);
-		//spg.getSupportNum().click();
-		spg.getSupportNum().sendKeys("9866781567");
+		log.debug("Country sent as - "+Country);
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,250)");
+		
+		spg.getSupportNum().clear();
+		spg.getSupportNum().sendKeys(SupportNumber);
+		log.debug("Support Number sent as - "+SupportNumber);
+		
+		spg.getCntEmailAdd().clear();
 		spg.getCntEmailAdd().sendKeys(EmailAddress);
+		log.debug("Email Address sent as - "+EmailAddress);
+		
+		spg.getCntPrsnName().clear();
 		spg.getCntPrsnName().sendKeys(ContactPerson);
+		log.debug("Contact Person sent as - "+ContactPerson);
+		
+		spg.getCntTelNum().clear();
 		spg.getCntTelNum().sendKeys(TelephoneNo);
-		spg.ClickCheckBox();
-		spg.CLickSubmitbutton();
-		spg.ClickAlertNoButton();
-		String ActualErrorMessage=spg.getSubimtErrorMessage();
+		log.debug("Telephone number sent as - "+TelephoneNo);
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.elementToBeClickable(spg.getCheckBox()));
+		spg.getCheckBox().click();
+		log.debug("--- CheckBox clicked ---");
+					
+		wait.until(ExpectedConditions.elementToBeClickable(spg.GetSubmitbutton()));
+		spg.GetSubmitbutton().click();
+		log.debug("--- Submit button clicked ---");
+		
+		wait.until(ExpectedConditions.visibilityOf(spg.GetAlertNoButton()));
+		spg.GetAlertNoButton().click();
+		log.debug("--- Clicked no button in alert ---");
+		
+		String ActualErrorMessage=spg.getSubimtErrorMessage().getText();
+		log.debug("Actual Error Message  - "+ActualErrorMessage);
+		log.debug("Expected Error Message  - "+ExpectedResult);
 		TextCompare(ActualErrorMessage,ExpectedResult,TestName);
+		
 	}
 		
 		@DataProvider(name="InvalidSignUpData")

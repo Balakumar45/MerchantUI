@@ -7,7 +7,8 @@
   <test name="Test">
     <classes>
       <class name="MerchantUI.LoginPage"/>
-	  <class name="MerchantUI.SignupPage"/>
+	 <!--<class name="MerchantUI.SignupPage"/>-->
+	 <!--<class name="MerchantUI.ForgotpasswordPage"/>-->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

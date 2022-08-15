@@ -8,9 +8,12 @@
     <classes>
       <class name="MerchantUI.LoginPage">
         <methods>
+          <include name="ValidLoginAttempt"/>
           <include name="CloseBrowser"/>
-          <include name="InvalidLoginAttempts"/>
-          <include name="CheckingForBrokenLink"/>
+          <include name="IsPCILogoDisplayed"/>
+          <include name="InvalidLoginAttempts" invocation-numbers="0 1 2 3 4 5"/>
+          <include name="loginFormTitleValidation"/>
+          <include name="IsPartnerLogoDisplayed"/>
           <include name="beforeTestExec"/>
         </methods>
       </class> <!-- MerchantUI.LoginPage -->

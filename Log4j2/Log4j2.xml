@@ -15,11 +15,12 @@
     </Console>
   </Appenders>
   <Loggers>
-		<Logger>
-
+		<Logger name="com.MerchantUI.app" additivity="false" level="trace">
+			<AppenderRef ref="File"/>
+	 		<AppenderRef ref="Console"/>
 		</Logger>
-    <Root level="trace">
+    <Root level="debug">
       <AppenderRef ref="File"/>
-    </Root>
+	</Root>
   </Loggers>
 </Configuration>

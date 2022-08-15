@@ -1,4 +1,4 @@
-22:14:54.597 [main] ERROR org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Cannot convert mailto:!@#$%^1234 in a valid relationship URI-> dummy-URI used
+22:34:12.041 [main] ERROR org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Cannot convert mailto:!@#$%^1234 in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^1234
 	at java.net.URI$Parser.fail(URI.java:2913) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3041) ~[?:?]
@@ -16,8 +16,8 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^123
 	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59) ~[poi-ooxml-5.2.2.jar:5.2.2]
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:289) ~[poi-ooxml-5.2.2.jar:5.2.2]
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:285) ~[poi-ooxml-5.2.2.jar:5.2.2]
-	at resources.XLUtils.getCellData(XLUtils.java:51) ~[classes/:?]
-	at MerchantUI.SignupPage.getInvalidTestData(SignupPage.java:162) ~[test-classes/:?]
+	at resources.XLUtils.getCellData(XLUtils.java:53) ~[classes/:?]
+	at MerchantUI.SignupPage.getInvalidTestData(SignupPage.java:211) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -50,12 +50,12 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^123
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) ~[testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) ~[testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) ~[testng-remote.jar:?]
-22:14:54.599 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
-22:14:54.600 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-22:14:54.606 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
-22:14:54.617 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-22:14:54.617 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-22:14:54.618 [main] ERROR org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Cannot convert mailto:!@#$%^&^%$ in a valid relationship URI-> dummy-URI used
+22:34:12.074 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+22:34:12.075 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:34:12.086 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+22:34:12.103 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:34:12.104 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:34:12.105 [main] ERROR org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Cannot convert mailto:!@#$%^&^%$ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&^%$
 	at java.net.URI$Parser.fail(URI.java:2913) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3041) ~[?:?]
@@ -73,8 +73,8 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&^%
 	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59) ~[poi-ooxml-5.2.2.jar:5.2.2]
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:289) ~[poi-ooxml-5.2.2.jar:5.2.2]
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:285) ~[poi-ooxml-5.2.2.jar:5.2.2]
-	at resources.XLUtils.getCellData(XLUtils.java:51) ~[classes/:?]
-	at MerchantUI.SignupPage.getInvalidTestData(SignupPage.java:162) ~[test-classes/:?]
+	at resources.XLUtils.getCellData(XLUtils.java:53) ~[classes/:?]
+	at MerchantUI.SignupPage.getInvalidTestData(SignupPage.java:211) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -107,7 +107,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&^%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) ~[testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) ~[testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) ~[testng-remote.jar:?]
-22:14:54.619 [main] ERROR org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Cannot convert mailto:!@#$%^1234 in a valid relationship URI-> dummy-URI used
+22:34:12.106 [main] ERROR org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Cannot convert mailto:!@#$%^1234 in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^1234
 	at java.net.URI$Parser.fail(URI.java:2913) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3041) ~[?:?]
@@ -125,8 +125,8 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^123
 	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59) ~[poi-ooxml-5.2.2.jar:5.2.2]
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:289) ~[poi-ooxml-5.2.2.jar:5.2.2]
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:285) ~[poi-ooxml-5.2.2.jar:5.2.2]
-	at resources.XLUtils.getCellData(XLUtils.java:51) ~[classes/:?]
-	at MerchantUI.SignupPage.getInvalidTestData(SignupPage.java:162) ~[test-classes/:?]
+	at resources.XLUtils.getCellData(XLUtils.java:53) ~[classes/:?]
+	at MerchantUI.SignupPage.getInvalidTestData(SignupPage.java:211) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -159,12 +159,12 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^123
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) ~[testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) ~[testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) ~[testng-remote.jar:?]
-22:14:54.620 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
-22:14:54.621 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-22:14:54.628 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
-22:14:54.637 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-22:14:54.637 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-22:14:54.638 [main] ERROR org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Cannot convert mailto:!@#$%^&^%$ in a valid relationship URI-> dummy-URI used
+22:34:12.107 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+22:34:12.108 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:34:12.131 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+22:34:12.150 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:34:12.151 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:34:12.152 [main] ERROR org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Cannot convert mailto:!@#$%^&^%$ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&^%$
 	at java.net.URI$Parser.fail(URI.java:2913) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3041) ~[?:?]
@@ -182,8 +182,8 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&^%
 	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59) ~[poi-ooxml-5.2.2.jar:5.2.2]
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:289) ~[poi-ooxml-5.2.2.jar:5.2.2]
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:285) ~[poi-ooxml-5.2.2.jar:5.2.2]
-	at resources.XLUtils.getCellData(XLUtils.java:51) ~[classes/:?]
-	at MerchantUI.SignupPage.getInvalidTestData(SignupPage.java:162) ~[test-classes/:?]
+	at resources.XLUtils.getCellData(XLUtils.java:53) ~[classes/:?]
+	at MerchantUI.SignupPage.getInvalidTestData(SignupPage.java:211) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -216,7 +216,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&^%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) ~[testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) ~[testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) ~[testng-remote.jar:?]
-22:14:54.638 [main] ERROR org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Cannot convert mailto:!@#$%^1234 in a valid relationship URI-> dummy-URI used
+22:34:12.153 [main] ERROR org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Cannot convert mailto:!@#$%^1234 in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^1234
 	at java.net.URI$Parser.fail(URI.java:2913) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3041) ~[?:?]
@@ -234,8 +234,8 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^123
 	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59) ~[poi-ooxml-5.2.2.jar:5.2.2]
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:289) ~[poi-ooxml-5.2.2.jar:5.2.2]
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:285) ~[poi-ooxml-5.2.2.jar:5.2.2]
-	at resources.XLUtils.getCellData(XLUtils.java:51) ~[classes/:?]
-	at MerchantUI.SignupPage.getInvalidTestData(SignupPage.java:162) ~[test-classes/:?]
+	at resources.XLUtils.getCellData(XLUtils.java:53) ~[classes/:?]
+	at MerchantUI.SignupPage.getInvalidTestData(SignupPage.java:211) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -268,12 +268,12 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^123
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) ~[testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) ~[testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) ~[testng-remote.jar:?]
-22:14:54.638 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
-22:14:54.639 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-22:14:54.647 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
-22:14:54.659 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-22:14:54.660 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-22:14:54.661 [main] ERROR org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Cannot convert mailto:!@#$%^&^%$ in a valid relationship URI-> dummy-URI used
+22:34:12.154 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+22:34:12.155 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:34:12.166 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+22:34:12.183 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:34:12.184 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:34:12.186 [main] ERROR org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Cannot convert mailto:!@#$%^&^%$ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&^%$
 	at java.net.URI$Parser.fail(URI.java:2913) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3041) ~[?:?]
@@ -291,8 +291,8 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&^%
 	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59) ~[poi-ooxml-5.2.2.jar:5.2.2]
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:289) ~[poi-ooxml-5.2.2.jar:5.2.2]
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:285) ~[poi-ooxml-5.2.2.jar:5.2.2]
-	at resources.XLUtils.getCellData(XLUtils.java:51) ~[classes/:?]
-	at MerchantUI.SignupPage.getInvalidTestData(SignupPage.java:162) ~[test-classes/:?]
+	at resources.XLUtils.getCellData(XLUtils.java:53) ~[classes/:?]
+	at MerchantUI.SignupPage.getInvalidTestData(SignupPage.java:211) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -325,7 +325,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&^%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) ~[testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) ~[testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) ~[testng-remote.jar:?]
-22:14:54.662 [main] ERROR org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Cannot convert mailto:!@#$%^1234 in a valid relationship URI-> dummy-URI used
+22:34:12.188 [main] ERROR org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Cannot convert mailto:!@#$%^1234 in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^1234
 	at java.net.URI$Parser.fail(URI.java:2913) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3041) ~[?:?]
@@ -343,8 +343,8 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^123
 	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59) ~[poi-ooxml-5.2.2.jar:5.2.2]
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:289) ~[poi-ooxml-5.2.2.jar:5.2.2]
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:285) ~[poi-ooxml-5.2.2.jar:5.2.2]
-	at resources.XLUtils.getCellData(XLUtils.java:51) ~[classes/:?]
-	at MerchantUI.SignupPage.getInvalidTestData(SignupPage.java:162) ~[test-classes/:?]
+	at resources.XLUtils.getCellData(XLUtils.java:53) ~[classes/:?]
+	at MerchantUI.SignupPage.getInvalidTestData(SignupPage.java:211) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -377,12 +377,12 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^123
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) ~[testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) ~[testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) ~[testng-remote.jar:?]
-22:14:54.663 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
-22:14:54.664 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-22:14:54.670 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
-22:14:54.680 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-22:14:54.680 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-22:14:54.681 [main] ERROR org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Cannot convert mailto:!@#$%^&^%$ in a valid relationship URI-> dummy-URI used
+22:34:12.188 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+22:34:12.191 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:34:12.204 [main] DEBUG org.apache.poi.ooxml.POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+22:34:12.228 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:34:12.229 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:34:12.230 [main] ERROR org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Cannot convert mailto:!@#$%^&^%$ in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&^%$
 	at java.net.URI$Parser.fail(URI.java:2913) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3041) ~[?:?]
@@ -400,8 +400,8 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&^%
 	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59) ~[poi-ooxml-5.2.2.jar:5.2.2]
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:289) ~[poi-ooxml-5.2.2.jar:5.2.2]
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:285) ~[poi-ooxml-5.2.2.jar:5.2.2]
-	at resources.XLUtils.getCellData(XLUtils.java:51) ~[classes/:?]
-	at MerchantUI.SignupPage.getInvalidTestData(SignupPage.java:162) ~[test-classes/:?]
+	at resources.XLUtils.getCellData(XLUtils.java:53) ~[classes/:?]
+	at MerchantUI.SignupPage.getInvalidTestData(SignupPage.java:211) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -434,7 +434,7 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^&^%
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) ~[testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) ~[testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) ~[testng-remote.jar:?]
-22:14:54.682 [main] ERROR org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Cannot convert mailto:!@#$%^1234 in a valid relationship URI-> dummy-URI used
+22:34:12.230 [main] ERROR org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Cannot convert mailto:!@#$%^1234 in a valid relationship URI-> dummy-URI used
 java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^1234
 	at java.net.URI$Parser.fail(URI.java:2913) ~[?:?]
 	at java.net.URI$Parser.scanEscape(URI.java:3041) ~[?:?]
@@ -452,8 +452,8 @@ java.net.URISyntaxException: Malformed escape pair at index 11: mailto:!@#$%^123
 	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59) ~[poi-ooxml-5.2.2.jar:5.2.2]
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:289) ~[poi-ooxml-5.2.2.jar:5.2.2]
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:285) ~[poi-ooxml-5.2.2.jar:5.2.2]
-	at resources.XLUtils.getCellData(XLUtils.java:51) ~[classes/:?]
-	at MerchantUI.SignupPage.getInvalidTestData(SignupPage.java:162) ~[test-classes/:?]
+	at resources.XLUtils.getCellData(XLUtils.java:53) ~[classes/:?]
+	at MerchantUI.SignupPage.getInvalidTestData(SignupPage.java:211) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]

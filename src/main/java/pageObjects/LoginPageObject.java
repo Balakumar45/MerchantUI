@@ -12,7 +12,7 @@ public class LoginPageObject {
 	private By Username=By.name("username");
 	private By Password=By.id("password");
 	private By Submit=By.id("submit");
-	private By PartnerLogo=By.xpath("//img[@class='custom']");
+	private By PartnerLogo=By.xpath("//a[@title='paymentz']//img");
 	private By PCImg=By.xpath("//img[@src='/merchant/images/pci_dss_logo.png']");
 	private By FrgotPass=By.linkText("Forgot your password?");
 	private By SignUpLftTxt=By.cssSelector(".NewPlatformLabel");
